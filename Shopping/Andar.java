@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Andar {
-	private String nome;
+    private String nome;
     private List<Loja> lojas;
 
     public Andar(String nome) {
