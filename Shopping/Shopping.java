@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Shopping {
 	private String nome;
-    private String cnpj;
-    private String contato;
-    private List<Andar> andares;
+    	private String cnpj;
+    	private String contato;
+    	private List<Andar> andares;
 	
 	public Shopping() {
 		// TODO Auto-generated constructor stub
