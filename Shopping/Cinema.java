@@ -4,16 +4,14 @@ import java.util.List;
 
 public class Cinema extends Loja{
 	public int capacidadeMx;
-	public double valorIngresso;
 	
 	public Cinema() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Cinema(String nome, String cnpj, int capacidadeMx, double valorIngresso) {
+	public Cinema(String nome, String cnpj, int capacidadeMx) {
 		super(nome, cnpj);
 		this.capacidadeMx = capacidadeMx;
-		this.valorIngresso = valorIngresso;
 	}
 
 	public int getCapacidadeMx() {
@@ -22,14 +20,6 @@ public class Cinema extends Loja{
 
 	public void setCapacidadeMx(int capacidadeMx) {
 		this.capacidadeMx = capacidadeMx;
-	}
-
-	public double getValorIngresso() {
-		return valorIngresso;
-	}
-
-	public void setValorIngresso(double valorIngresso) {
-		this.valorIngresso = valorIngresso;
 	}
 	
 	@Override
