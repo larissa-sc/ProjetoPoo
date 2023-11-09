@@ -3,23 +3,15 @@ package Shopping;
 import java.util.List;
 
 public class Academia extends Loja{
-    private double mensalidade;
 
     public Academia() {
 		// TODO Auto-generated constructor stub
 	}
     
-	public Academia(String nome, String cnpj, double mensalidade) {
+	public Academia(String nome, String cnpj) {
 		super(nome, cnpj);
-		this.mensalidade = mensalidade;
 	}
-
-	public double getMensalidade() {
-		return mensalidade;
-	}
-
-	public void setMensalidade(double mensalidade) {
-		this.mensalidade = mensalidade;
+	
 	}
 	
 	@Override
