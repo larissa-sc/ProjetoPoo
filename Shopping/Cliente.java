@@ -21,7 +21,6 @@ public class Cliente extends Pessoa{
 
 	@Override
 	void printDados() {
-		// TODO Auto-generated method stub
-		
+		System.out.print
 	}
 }
