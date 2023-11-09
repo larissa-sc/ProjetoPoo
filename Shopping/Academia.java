@@ -12,8 +12,6 @@ public class Academia extends Loja{
 		super(nome, cnpj);
 	}
 	
-	}
-	
 	@Override
 	public void setDonoLoja(DonoLoja dono) {
 		// TODO Auto-generated method stub
