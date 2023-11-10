@@ -4,16 +4,14 @@ import java.util.List;
 
 public class Estacionamento extends Loja{
 	public int capacidadeMx;
-	public double pracoPorH;
 	
 	public Estacionamento() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Estacionamento(String nome, String cnpj, int capacidadeMx, double pracoPorH) {
+	public Estacionamento(String nome, String cnpj, int capacidadeMx) {
 		super(nome, cnpj);
 		this.capacidadeMx = capacidadeMx;
-		this.pracoPorH = pracoPorH;
 	}
 
 	public int getCapacidadeMx() {
@@ -22,15 +20,7 @@ public class Estacionamento extends Loja{
 
 	public void setCapacidadeMx(int capacidadeMx) {
 		this.capacidadeMx = capacidadeMx;
-	}
-
-	public double getPracoPorH() {
-		return pracoPorH;
-	}
-
-	public void setPracoPorH(double pracoPorH) {
-		this.pracoPorH = pracoPorH;
-	}
+	}
 	
 	@Override
 	public void setDonoLoja(DonoLoja dono) {
