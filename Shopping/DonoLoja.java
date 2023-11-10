@@ -12,6 +12,6 @@ public class DonoLoja extends Pessoa{
 	
 	@Override
 	public void printDados() {
-		System.out.println("Nome: ");
+		System.out.println("Dados do Lojista: \n" + "\n Nome: " + this.getNome() + "\n CPF: " + this.getCpf() + "\n Contato: " + this.getContato());
 	}
 }
