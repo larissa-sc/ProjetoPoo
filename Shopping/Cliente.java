@@ -21,6 +21,6 @@ public class Cliente extends Pessoa{
 
 	@Override
 	void printDados() {
-		System.out.println("Dados do Cliente: \n" + "\n" + "Nome: " + this.nome())
+		System.out.println("Dados do Cliente: \n" + "\n Nome: " + this.getNome() + "\n CPF: " + this.getCpf() + "\n Contato: " + this.getContato());
 	}
 }
