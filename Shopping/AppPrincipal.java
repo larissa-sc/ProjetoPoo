@@ -283,7 +283,8 @@ public class AppPrincipal {
 					}
 					
 					else if (opcaoFuncionario.equals("2")) {
-						exibirMenuLojas();
+						adicionarProdutoALoja(loja1, scanner);
+						exibirMenuFuncionario();
 					}
 					
 					else if (opcaoFuncionario.equals("3")) {
@@ -305,7 +306,8 @@ public class AppPrincipal {
 					}
 					
 					else if (opcaoFuncionario.equals("2")) {
-						exibirMenuLojas();
+						adicionarProdutoALoja(loja2, scanner);
+						exibirMenuFuncionario();
 					}
 					
 					else if (opcaoFuncionario.equals("3")) {
@@ -325,18 +327,13 @@ public class AppPrincipal {
 					if (opcaoFuncionario.equals("1")) {
 						adicionarCliente(estacionamento, scanner);
 					}
-					
-					else if (opcaoFuncionario.equals("2")) {
-						exibirMenuLojas();
-					}
-					
 					else if (opcaoFuncionario.equals("3")) {
 						System.out.println("\n Encerrando... \n");
 						break;
 					}
 					
 					else {
-						System.out.println("\n Opção inválida. \n");
+						System.out.println("\n Você escolheu uma opção inválida. \n");
 					}
 				}
 				
@@ -349,7 +346,8 @@ public class AppPrincipal {
 					}
 					
 					else if (opcaoFuncionario.equals("2")) {
-						exibirMenuLojas();
+						adicionarProdutoALoja(academia, scanner);
+						exibirMenuFuncionario();
 					}
 					
 					else if (opcaoFuncionario.equals("3")) {
@@ -371,7 +369,8 @@ public class AppPrincipal {
 					}
 					
 					else if (opcaoFuncionario.equals("2")) {
-						exibirMenuLojas();
+						adicionarProdutoALoja(cinema, scanner);
+						exibirMenuFuncionario();
 					}
 					
 					else if (opcaoFuncionario.equals("3")) {
@@ -434,9 +433,29 @@ public class AppPrincipal {
 	private static void exibirMenuFuncionario() {
 		System.out.println("\n ---------- Menu Funcionário ----------" + 
 							"\n 1. Registrar uma venda" +
-							"\n 2. Sair" + "\n Digite o número da opção que deseja:");
+							"\n 2. Cadastrar novo produto à loja" +
+							"\n 3. Sair" + "\n Digite o número da opção que deseja:");
 	}
-	
+	private static void adicionarProdutoALoja(Loja loja, Scanner scanner) {
+		Produto produto = new Produto();
+		System.out.println("\n CADASTRO DO PRODUTO \n Nome do produto: ");
+		produto.setNome(scanner.nextLine());
+		
+		System.out.println("\n Marca do produto: ");
+		produto.setMarca(scanner.nextLine());
+		
+		System.out.println("\n Valor do produto: ");
+		double valor = scanner.nextDouble();
+		produto.setValor(valor);
+		
+		loja.addProdutos(produto);
+		System.out.println("\n Produto cadastrado!" + "\n Nome: " + produto.getNome() + "\n Valor: R$" + produto.getValor());
+	    System.out.println("\n Deseja cadastrar mais produtos no estoque? (S/N): ");
+	    String respostaP = scanner.next().toUpperCase();
+	    if (respostaP.equals("S")) {
+	    	adicionarProdutoALoja(loja, scanner);
+	    }
+	 }
 	//Método para adicionar produtos ao carrinho de compras:
 
 	private static void adicionarAoCarrinho(Loja loja, CarrinhoDeCompras carrinho, Scanner scanner) {
