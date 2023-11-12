@@ -19,6 +19,9 @@ public class Loja {
 		super();
 		this.nome = nome;
 		this.cnpj = cnpj;
+		this.funcionarios = new ArrayList<>();
+		this.produtos = new ArrayList<>();
+		this.clientes = new ArrayList<>();
 	}
 
 	public String getNome() {
@@ -36,7 +39,7 @@ public class Loja {
 	public void setCnpj(String cnpj) {
 		this.cnpj = cnpj;
 	}
-	
+
 	public DonoLoja getDonoLoja() {
 		return dono;
 	}
@@ -49,8 +52,8 @@ public class Loja {
 		return produtos;
 	}
 
-	public void setProduto(List<Produto> produto) {
-		this.produtos = new ArrayList<Produto>();
+	public void setProduto(List<Produto> produtos) {
+		this.produtos = produtos;
 	}
 
 	public List<Funcionario> getFuncionarios() {
@@ -58,7 +61,7 @@ public class Loja {
 	}
 
 	public void setFuncionarios(List<Funcionario> funcionarios) {
-		this.funcionarios = new ArrayList<Funcionario>();
+		this.funcionarios = funcionarios;
 	}
 	
 	public List<Cliente> getClientes() {
@@ -66,7 +69,7 @@ public class Loja {
 	}
 
 	public void setClientes(List<Cliente> clientes) {
-		this.clientes = new ArrayList<Cliente>();
+		this.clientes = clientes;
 	}
 	
 	public void addCliente(Cliente cliente) {
@@ -86,19 +89,28 @@ public class Loja {
 	}
 	
 	public void printFuncionarios() {
-		System.out.println("Segue a relação dos funcionários: \n");
+		System.out.println("\n Segue a relação dos funcionários:");
 		for (Funcionario funcionario : funcionarios) {
-			System.out.println("INFORMAÇÕES DO FUNCIONÁRIO \n Nome: " + funcionario.getNome() + "\n CPF: " + funcionario.getCpf()
+			System.out.println("\n INFORMAÇÕES DO FUNCIONÁRIO \n Nome: " + funcionario.getNome() + "\n CPF: " + funcionario.getCpf()
 			+ "\n Função: " + funcionario.getFuncao() + "\n Salário: " + funcionario.getSalario() 
-			+ "\n Contatos: " + funcionario.getContato());
+			+ "\n Contato: " + funcionario.getContato());
 		}
 	}
 	
 	public void printProdutos() {
-		System.out.println("Segue a relação de Produtos: \n");
+		System.out.println("\n Segue a relação de Produtos: ");
 		for (Produto produto : produtos) {
-			System.out.println("Produto " + produtos.indexOf(produto) + ":" + "\n Nome: " + produto.getNome() 
+			System.out.println("\n Produto " + produtos.indexOf(produto) + ":" + "\n Nome: " + produto.getNome() 
 			+ "\n Marca: " + produto.getMarca() + "\n Valor: " + produto.getValor());
+		}
+	}
+	
+	public void printVendas() {
+		System.out.println("\n Segue a relação de Vendas: ");
+		for (Cliente cliente : clientes) {
+			for (Produto produto : cliente.getCarrinhoDeCompras().getProdutos()) {
+				System.out.println("Informações da venda \n" + produto.getNome() + "\n" + produto.getMarca() + "\n " + produto.getValor());
+			}
 		}
 	}
 }

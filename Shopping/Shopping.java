@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Shopping {
-	private String nome;
+		private String nome;
     	private String cnpj;
     	private String contato;
     	private List<Andar> andares;
@@ -18,6 +18,7 @@ public class Shopping {
 		this.nome = nome;
 		this.cnpj = cnpj;
 		this.contato = contato;
+		this.andares = new ArrayList<>();
 	}
 
 	public String getNome() {
@@ -49,7 +50,7 @@ public class Shopping {
 	}
 
 	public void setAndares(List<Andar> andares) {
-		this.andares = new ArrayList<Andar>();
+		this.andares = andares;
 	}
 	
 	public void addAndar(Andar andar) {

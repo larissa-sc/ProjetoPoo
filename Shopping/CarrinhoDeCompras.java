@@ -4,36 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CarrinhoDeCompras {
-	private double valorTotal;
-	private int qtDoProduto;
 	private List<Produto> produtos;
 	
 	public CarrinhoDeCompras() {
-		// TODO Auto-generated constructor stub
-	}
-
-	public double getValorTotal() {
-		return valorTotal;
-	}
-
-	public void setValorTotal(double valorTotal) {
-		this.valorTotal = valorTotal;
+		super();
+		this.produtos = new ArrayList<>();
 	}
 
 	public List<Produto> getProdutos() {
 		return produtos;
 	}
 
-	public int getQtDoProduto() {
-		return qtDoProduto;
-	}
-
-	public void setQtDoProduto(int qtDoProduto) {
-		this.qtDoProduto = qtDoProduto;
-	}
-
 	public void setProdutos(List<Produto> produtos) {
-		this.produtos = new ArrayList<Produto>();
+		this.produtos = produtos;
 	}
 	
 	public void addProduto(Produto produto) {
@@ -45,11 +28,9 @@ public class CarrinhoDeCompras {
 	}
 	
 	public double calcularValor() {
-		valorTotal = 0.0;
-		double valorProduto;
+		double valorTotal = 0.0;
 		for (Produto produto : produtos) {
-			valorProduto = produto.getValor() * qtDoProduto;
-			valorTotal += valorProduto;
+			valorTotal += produto.getValor();
 		}
 		return valorTotal;
 	}

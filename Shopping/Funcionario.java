@@ -32,6 +32,6 @@ public class Funcionario extends Pessoa{
 
 	@Override
 	public void printDados() {
-		System.out.println("Dados do Funcionário: \n" + "\n Nome: " + this.getNome() + "\n CPF: " + this.getCpf() + "\n Contato: " + this.getContato() + "\n Função: " + this.getFuncao() + "\n Salário: " + this.getSalario);
+		System.out.println("Dados do Funcionário: \n" + "\n Nome: " + this.getNome() + "\n CPF: " + this.getCpf() + "\n Contato: " + this.getContato() + "\n Função: " + this.getFuncao() + "\n Salário: " + this.getSalario());
 	}
 }

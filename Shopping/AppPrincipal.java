@@ -103,7 +103,7 @@ public class AppPrincipal {
 					
 					else if (opcaoDono.equals("3")) {
 						if (loja1.getClientes().isEmpty()) {
-							System.out.println("Não há relatório de vendas");
+							System.out.println("\n Não há relatório de vendas");
 						}
 						else {
 							loja1.printVendas();
@@ -111,6 +111,10 @@ public class AppPrincipal {
 					}
 					
 					else if (opcaoDono.equals("4")) {
+						exibirMenu();
+					}
+					
+					else if (opcaoDono.equals("5")) {
 						System.out.println("Encerrando...");
 						break;
 					}
@@ -134,7 +138,7 @@ public class AppPrincipal {
 					
 					else if (opcaoDono.equals("3")) {
 						if (loja1.getClientes().isEmpty()) {
-							System.out.println("Não há relatório de vendas");
+							System.out.println("\n Não há relatório de vendas");
 						}
 						else {
 							loja2.printVendas();
@@ -142,6 +146,10 @@ public class AppPrincipal {
 					}
 					
 					else if (opcaoDono.equals("4")) {
+						exibirMenu();
+					}
+					
+					else if (opcaoDono.equals("5")) {
 						System.out.println("Encerrando...");
 						break;
 					}
@@ -165,7 +173,7 @@ public class AppPrincipal {
 					
 					else if (opcaoDono.equals("3")) {
 						if (estacionamento.getClientes().isEmpty()) {
-							System.out.println("Não há relatório de vendas");
+							System.out.println("\n Não há relatório de vendas");
 						}
 						else {
 							estacionamento.printVendas();
@@ -173,6 +181,10 @@ public class AppPrincipal {
 					}
 					
 					else if (opcaoDono.equals("4")) {
+						exibirMenu();
+					}
+					
+					else if (opcaoDono.equals("5")) {
 						System.out.println("Encerrando...");
 						break;
 					}
@@ -196,7 +208,7 @@ public class AppPrincipal {
 					
 					else if (opcaoDono.equals("3")) {
 						if (academia.getClientes().isEmpty()) {
-							System.out.println("Não há relatório de vendas");
+							System.out.println("\n Não há relatório de vendas");
 						}
 						else {
 							academia.printVendas();
@@ -204,6 +216,10 @@ public class AppPrincipal {
 					}
 					
 					else if (opcaoDono.equals("4")) {
+						exibirMenu();
+					}
+					
+					else if (opcaoDono.equals("5")) {
 						System.out.println("Encerrando...");
 						break;
 					}
@@ -227,7 +243,7 @@ public class AppPrincipal {
 					
 					else if (opcaoDono.equals("3")) {
 						if (cinema.getClientes().isEmpty()) {
-							System.out.println("Não há relatório de vendas");
+							System.out.println("\n Não há relatório de vendas");
 						}
 						else {
 							cinema.printVendas();
@@ -235,6 +251,10 @@ public class AppPrincipal {
 					}
 					
 					else if (opcaoDono.equals("4")) {
+						exibirMenu();
+					}
+					
+					else if (opcaoDono.equals("5")) {
 						System.out.println("Encerrando...");
 						break;
 					}
@@ -245,6 +265,10 @@ public class AppPrincipal {
 				}
 				
 				else if (opcaoLoja.equals("6")) {
+					exibirMenu();
+				}
+				
+				else if (opcaoLoja.equals("7")) {
 					System.out.println("Encerrando...");
 					break;
 				}
@@ -265,7 +289,121 @@ public class AppPrincipal {
 					if (opcaoFuncionario.equals("1")) {
 						adicionarCliente(loja1, scanner);
 					}
+					
+					else if (opcaoFuncionario.equals("2")) {
+						exibirMenu();
+					}
+					
+					else if (opcaoFuncionario.equals("3")) {
+						System.out.println("Encerrando...");
+						break;
+					}
+					
+					else {
+						System.out.println("Opção inválida");
+					}
 				}
+				
+				else if (opcaoLoja.equals("2")) {
+					exibirMenuFuncionario();
+					String opcaoFuncionario = scanner.nextLine();
+					
+					if (opcaoFuncionario.equals("1")) {
+						adicionarCliente(loja2, scanner);
+					}
+					
+					else if (opcaoFuncionario.equals("2")) {
+						exibirMenu();
+					}
+					
+					else if (opcaoFuncionario.equals("3")) {
+						System.out.println("Encerrando...");
+						break;
+					}
+					
+					else {
+						System.out.println("Opção inválida");
+					}
+				}
+				
+				else if (opcaoLoja.equals("3")) {
+					exibirMenuFuncionario();
+					String opcaoFuncionario = scanner.nextLine();
+					
+					if (opcaoFuncionario.equals("1")) {
+						adicionarCliente(estacionamento, scanner);
+					}
+					
+					else if (opcaoFuncionario.equals("2")) {
+						exibirMenu();
+					}
+					
+					else if (opcaoFuncionario.equals("3")) {
+						System.out.println("Encerrando...");
+						break;
+					}
+					
+					else {
+						System.out.println("Opção inválida");
+					}
+				}
+				
+				else if (opcaoLoja.equals("4")) {
+					exibirMenuFuncionario();
+					String opcaoFuncionario = scanner.nextLine();
+					
+					if (opcaoFuncionario.equals("1")) {
+						adicionarCliente(academia, scanner);
+					}
+					
+					else if (opcaoFuncionario.equals("2")) {
+						exibirMenu();
+					}
+					
+					else if (opcaoFuncionario.equals("3")) {
+						System.out.println("Encerrando...");
+						break;
+					}
+					
+					else {
+						System.out.println("Opção inválida");
+					}
+				}
+				
+				else if (opcaoLoja.equals("5")) {
+					exibirMenuFuncionario();
+					String opcaoFuncionario = scanner.nextLine();
+					
+					if (opcaoFuncionario.equals("1")) {
+						adicionarCliente(cinema, scanner);
+					}
+					
+					else if (opcaoFuncionario.equals("2")) {
+						exibirMenu();
+					}
+					
+					else if (opcaoFuncionario.equals("3")) {
+						System.out.println("Encerrando...");
+						break;
+					}
+					
+					else {
+						System.out.println("Opção inválida");
+					}
+				}
+				
+				else if (opcaoLoja.equals("6")) {
+					exibirMenu();
+				}
+				
+				else if (opcaoLoja.equals("7")) {
+					System.out.println("Encerrando...");
+					break;
+				}
+			}
+        	
+        	else {
+				System.out.println("Opção Inválida!");
 			}
         }		
     }
@@ -273,8 +411,7 @@ public class AppPrincipal {
 		System.out.println("---------- Menu Principal ----------" + 
 							"\n 1. Entrar como Dono da Loja" +
 							"\n 2. Entrar como Funcionário" +
-							"\n 3. Entrar como Cliente" +
-							"\n 4. Sair" + "\n Digite o número da opção escolhida:");
+							"\n 3. Sair" + "\n Digite o número da opção escolhida:");
 	}
 	
 	private static void exibirMenuLojas() {
@@ -284,7 +421,8 @@ public class AppPrincipal {
 							"\n 3. Estacionamento" +
 							"\n 4. Modelo Fit" + 
 							"\n 5. CineDay" +
-							"\n 6. Sair" + "\n Digite o número da opção que você é responsável:");
+							"\n 6. Retornar ao Menu Anterior" +
+							"\n 7. Sair" + "\n Digite o número da opção que você é responsável:");
 	}
 	
 	private static void exibirMenuDono() {
@@ -292,6 +430,7 @@ public class AppPrincipal {
 							"\n 1. Lista de Produtos" +
 							"\n 2. Lista de Funcionários" +
 							"\n 3. Lista de Vendas" +
+							"\n 4. Retornar ao Menu Anterior" +
 							"\n 4. Sair" + "\n Digite o número da opção que deseja visualizar:");
 	}
 	
@@ -302,7 +441,6 @@ public class AppPrincipal {
 	}
 	
 	//Método para adicionar produtos ao carrinho de compras:
-
 
 	private static void adicionarAoCarrinho(Loja loja, CarrinhoDeCompras carrinho, Scanner scanner) {
 	    System.out.println("Escolha o número do produto comprado: ");
@@ -352,6 +490,10 @@ public class AppPrincipal {
 	        if (!resposta.equals("S")) {
 	            break;
 	        }
+	        
+	        else { 
+				carrinho.calcularValor();
+			}
 	    }
 	    
 	    adicionarCarrinhoAoCliente(cliente, carrinho);

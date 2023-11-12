@@ -9,6 +9,7 @@ public class Andar {
 
     public Andar(String nome) {
         this.nome = nome;
+        this.lojas = new ArrayList<>();
     }
 
     public String getNome() {
@@ -24,7 +25,7 @@ public class Andar {
     }
 
     public void setLojas(List<Loja> lojas) {
-        this.lojas = new ArrayList<Loja>();
+        this.lojas = lojas;
     }
 
     public void addLoja(Loja loja) {

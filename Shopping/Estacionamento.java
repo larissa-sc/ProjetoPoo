@@ -20,7 +20,8 @@ public class Estacionamento extends Loja{
 
 	public void setCapacidadeMx(int capacidadeMx) {
 		this.capacidadeMx = capacidadeMx;
-	}
+	}
+
 	
 	@Override
 	public void setDonoLoja(DonoLoja dono) {
@@ -68,5 +69,11 @@ public class Estacionamento extends Loja{
 	public void printProdutos() {
 		// TODO Auto-generated method stub
 		super.printProdutos();
+	}
+	
+	@Override
+	public void printVendas() {
+		// TODO Auto-generated method stub
+		super.printVendas();
 	}
 }

@@ -1,7 +1,7 @@
 package Shopping;
 
 public class Cliente extends Pessoa{
-	private CarrinhoDeCompras carrinhoDeCompras;
+	private CarrinhoDeCompras carrinho;
 	
 	public Cliente() {
 		// TODO Auto-generated constructor stub
@@ -12,11 +12,11 @@ public class Cliente extends Pessoa{
 	}
 
 	public CarrinhoDeCompras getCarrinhoDeCompras() {
-		return carrinhoDeCompras;
+		return carrinho;
 	}
 
-	public void setCarrinhoDeCompras(CarrinhoDeCompras carrinhoDeCompras) {
-		this.carrinhoDeCompras = carrinhoDeCompras;
+	public void setCarrinhoDeCompras(CarrinhoDeCompras carrinho) {
+		this.carrinho = carrinho;
 	}
 
 	@Override
