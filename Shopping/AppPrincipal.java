@@ -102,7 +102,12 @@ public class AppPrincipal {
 					}
 					
 					else if (opcaoDono.equals("3")) {
-						loja1.printVendas();
+						if (loja1.getClientes().isEmpty()) {
+							System.out.println("Não há relatório de vendas");
+						}
+						else {
+							loja1.printVendas();
+						}
 					}
 					
 					else if (opcaoDono.equals("4")) {
@@ -128,7 +133,12 @@ public class AppPrincipal {
 					}
 					
 					else if (opcaoDono.equals("3")) {
-						loja2.printVendas();
+						if (loja1.getClientes().isEmpty()) {
+							System.out.println("Não há relatório de vendas");
+						}
+						else {
+							loja2.printVendas();
+						}
 					}
 					
 					else if (opcaoDono.equals("4")) {
@@ -154,7 +164,12 @@ public class AppPrincipal {
 					}
 					
 					else if (opcaoDono.equals("3")) {
-						estacionamento.printVendas();
+						if (estacionamento.getClientes().isEmpty()) {
+							System.out.println("Não há relatório de vendas");
+						}
+						else {
+							estacionamento.printVendas();
+						}
 					}
 					
 					else if (opcaoDono.equals("4")) {
@@ -180,7 +195,12 @@ public class AppPrincipal {
 					}
 					
 					else if (opcaoDono.equals("3")) {
-						academia.printVendas();
+						if (academia.getClientes().isEmpty()) {
+							System.out.println("Não há relatório de vendas");
+						}
+						else {
+							academia.printVendas();
+						}
 					}
 					
 					else if (opcaoDono.equals("4")) {
@@ -206,7 +226,12 @@ public class AppPrincipal {
 					}
 					
 					else if (opcaoDono.equals("3")) {
-						cinema.printVendas();
+						if (cinema.getClientes().isEmpty()) {
+							System.out.println("Não há relatório de vendas");
+						}
+						else {
+							cinema.printVendas();
+						}
 					}
 					
 					else if (opcaoDono.equals("4")) {
@@ -226,6 +251,20 @@ public class AppPrincipal {
 				
 				else {
 					System.out.println("Opção inválida");
+				}
+			}
+        	
+        	else if (opcao.equals("2")) {
+				exibirMenuLojas();
+				String opcaoLoja = scanner.nextLine();
+				
+				if (opcaoLoja.equals("1")) {
+					exibirMenuFuncionario();
+					String opcaoFuncionario = scanner.nextLine();
+					
+					if (opcaoFuncionario.equals("1")) {
+						adicionarCliente(loja1, scanner);
+					}
 				}
 			}
         }		
@@ -254,5 +293,45 @@ public class AppPrincipal {
 							"\n 2. Lista de Funcionários" +
 							"\n 3. Lista de Vendas" +
 							"\n 4. Sair" + "\n Digite o número da opção que deseja visualizar:");
+	}
+	
+	private static void exibirMenuFuncionario() {
+		System.out.println("---------- Menu Loja ----------" + 
+							"\n 1. Registrar uma venda" +
+							"\n 2. Sair" + "\n Digite o número da opção que deseja:");
+	}
+	
+	private static void adicionarCliente(Loja loja, Scanner scanner) {
+		Cliente cliente = new Cliente();
+		System.out.println("Nome do Cliente: ");
+		cliente.nome = scanner.nextLine();
+		
+		System.out.println("CPF do Cliente: ");
+		cliente.cpf = scanner.nextLine();
+		
+		System.out.println("Contato do Cliente: ");
+		cliente.contato = scanner.nextLine();
+		
+		loja.addCliente(cliente);
+		
+		CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
+		
+		System.out.println("----------- Menu Produtos ----------");
+		for (Produto produto : loja.getProduto()) {
+			System.out.println("\n " + loja.getProduto().indexOf(produto) + ". " + produto.getNome());
+		}
+		while (true) {
+			System.out.println("\n Escolha o número do produto comprado: ");
+			int nProduto = scanner.nextInt();
+			if (nProduto < loja.getProduto().size()) {
+				carrinho.addProduto(loja.getProduto().get(nProduto));
+				System.out.println("\n Quantidade do produto comprada: ");
+				carrinho.setQtDoProduto(scanner.nextInt());
+			}
+			else {
+				break;
+			}
+			cliente.setCarrinhoDeCompras(carrinho);
+		}
 	}
 }
