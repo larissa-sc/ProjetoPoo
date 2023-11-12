@@ -85,226 +85,218 @@ public class AppPrincipal {
         	exibirMenu();
         	String opcao = scanner.nextLine(); // escolher opção do menu
         	
-        	if (opcao.equals("1")) {
+        	if (opcao.equals("1")) { //dono
 				exibirMenuLojas();
 				String opcaoLoja = scanner.nextLine();
 				
-				if (opcaoLoja.equals("1")) {
+				if (opcaoLoja.equals("1")) { //loja1 dafiti dono
 					exibirMenuDono();
 					String opcaoDono = scanner.nextLine();
 					
-					if (opcaoDono.equals("1")) {
+					if (opcaoDono.equals("1")) { // mostrar produtos
 						loja1.printProdutos();
 					}
 					
-					else if (opcaoDono.equals("2")) {
+					else if (opcaoDono.equals("2")) { // mostrar funcionários
 						loja1.printFuncionarios();
 					}
 					
-					else if (opcaoDono.equals("3")) {
+					else if (opcaoDono.equals("3")) { // mostrar vendas
 						if (loja1.getClientes().isEmpty()) {
-							System.out.println("\n Não há relatório de vendas");
+							System.out.println("\n Não há relatório de vendas. \n");
 						}
 						else {
-							loja1.printVendas();
-						}
+							loja1.printVendas();}
 					}
 					
-					else if (opcaoDono.equals("4")) {
-						exibirMenu();
+					else if (opcaoDono.equals("4")) { //retornar ao menu principal
 					}
 					
-					else if (opcaoDono.equals("5")) {
-						System.out.println("Encerrando...");
+					else if (opcaoDono.equals("5")) { // encerrar
+						System.out.println("\n Encerrando... \n");
 						break;
 					}
-					
 					else {
-						System.out.println("Opção inválida");
+						System.out.println("\n Opção inválida. \n");
 					}
 				}
 				
-				else if (opcaoLoja.equals("2")) {
+				else if (opcaoLoja.equals("2")) { // loja2 americanas dono
 					exibirMenuDono();
 					String opcaoDono = scanner.nextLine();
 					
-					if (opcaoDono.equals("1")) {
+					if (opcaoDono.equals("1")) { // mostrar produtos
 						loja2.printProdutos();
 					}
 					
-					else if (opcaoDono.equals("2")) {
+					else if (opcaoDono.equals("2")) { // mostrar funcionários
 						loja2.printFuncionarios();
 					}
 					
-					else if (opcaoDono.equals("3")) {
-						if (loja1.getClientes().isEmpty()) {
-							System.out.println("\n Não há relatório de vendas");
+					else if (opcaoDono.equals("3")) { // mostrar vendas
+						if (loja2.getClientes().isEmpty()) {
+							System.out.println("\n Não há relatório de vendas. \n");
 						}
 						else {
 							loja2.printVendas();
 						}
 					}
 					
-					else if (opcaoDono.equals("4")) {
-						exibirMenu();
+					else if (opcaoDono.equals("4")) { // retornar ao menu principal
 					}
 					
-					else if (opcaoDono.equals("5")) {
-						System.out.println("Encerrando...");
+					else if (opcaoDono.equals("5")) { // encerrar
+						System.out.println("\n Encerrando... \n");
 						break;
 					}
 					
 					else {
-						System.out.println("Opção inválida");
+						System.out.println("\n Opção inválida. \n");
 					}
 				}
 				
-				else if (opcaoLoja.equals("3")) {
+				else if (opcaoLoja.equals("3")) { // estacionamento dono
 					exibirMenuDono();
 					String opcaoDono = scanner.nextLine();
 					
-					if (opcaoDono.equals("1")) {
+					if (opcaoDono.equals("1")) { // mostrar produtos
 						estacionamento.printProdutos();
 					}
 					
-					else if (opcaoDono.equals("2")) {
+					else if (opcaoDono.equals("2")) { // mostrar funcionários
 						estacionamento.printFuncionarios();
 					}
 					
-					else if (opcaoDono.equals("3")) {
+					else if (opcaoDono.equals("3")) { // mostrar vendas
 						if (estacionamento.getClientes().isEmpty()) {
-							System.out.println("\n Não há relatório de vendas");
+							System.out.println("\n Não há relatório de vendas. \n");
 						}
 						else {
-							estacionamento.printVendas();
-						}
+							estacionamento.printVendas();}
 					}
 					
-					else if (opcaoDono.equals("4")) {
-						exibirMenu();
+					else if (opcaoDono.equals("4")) { // retornar ao menu principal
 					}
 					
-					else if (opcaoDono.equals("5")) {
-						System.out.println("Encerrando...");
+					else if (opcaoDono.equals("5")) { // encerrar
+						System.out.println("\n Encerrando... \n");
 						break;
 					}
 					
 					else {
-						System.out.println("Opção inválida");
+						System.out.println("\n Opção inválida. \n");
 					}
 				}
 				
-				else if (opcaoLoja.equals("4")) {
+				else if (opcaoLoja.equals("4")) { // academia dono
 					exibirMenuDono();
 					String opcaoDono = scanner.nextLine();
 					
-					if (opcaoDono.equals("1")) {
+					if (opcaoDono.equals("1")) { // mostrar produtos
 						academia.printProdutos();
 					}
 					
-					else if (opcaoDono.equals("2")) {
+					else if (opcaoDono.equals("2")) { // mostrar funcionários
 						academia.printFuncionarios();
 					}
 					
-					else if (opcaoDono.equals("3")) {
+					else if (opcaoDono.equals("3")) { // mostrar vendas
 						if (academia.getClientes().isEmpty()) {
-							System.out.println("\n Não há relatório de vendas");
+							System.out.println("\n Não há relatório de vendas. \n");
 						}
 						else {
 							academia.printVendas();
 						}
 					}
 					
-					else if (opcaoDono.equals("4")) {
-						exibirMenu();
+					else if (opcaoDono.equals("4")) { // retornar ao menu principal
 					}
 					
-					else if (opcaoDono.equals("5")) {
-						System.out.println("Encerrando...");
+					else if (opcaoDono.equals("5")) { // encerrar
+						System.out.println("\n Encerrando... \n");
 						break;
 					}
 					
 					else {
-						System.out.println("Opção inválida");
+						System.out.println("\n Opção inválida. \n");
 					}
 				}
 				
-				else if (opcaoLoja.equals("5")) {
+				else if (opcaoLoja.equals("5")) { // cinema dono
 					exibirMenuDono();
 					String opcaoDono = scanner.nextLine();
 					
-					if (opcaoDono.equals("1")) {
+					if (opcaoDono.equals("1")) {  // mostrar produtos
 						cinema.printProdutos();
 					}
 					
-					else if (opcaoDono.equals("2")) {
+					else if (opcaoDono.equals("2")) {  // mostrar funcionários
 						cinema.printFuncionarios();
 					}
 					
-					else if (opcaoDono.equals("3")) {
+					else if (opcaoDono.equals("3")) {  // mostrar vendas
 						if (cinema.getClientes().isEmpty()) {
-							System.out.println("\n Não há relatório de vendas");
+							System.out.println("\n Não há relatório de vendas. \n");
 						}
 						else {
 							cinema.printVendas();
 						}
 					}
 					
-					else if (opcaoDono.equals("4")) {
-						exibirMenu();
+					else if (opcaoDono.equals("4")) {  // retornar ao menu principal
 					}
 					
-					else if (opcaoDono.equals("5")) {
-						System.out.println("Encerrando...");
+					else if (opcaoDono.equals("5")) {  // encerrar
+						System.out.println("\n Encerrando... \n");
 						break;
 					}
 					
 					else {
-						System.out.println("Opção inválida");
+						System.out.println("\n Opção inválida. \n");
 					}
 				}
 				
 				else if (opcaoLoja.equals("6")) {
-					exibirMenu();
 				}
 				
 				else if (opcaoLoja.equals("7")) {
-					System.out.println("Encerrando...");
+					System.out.println("\n Encerrando... \n");
 					break;
 				}
 				
 				else {
-					System.out.println("Opção inválida");
+					System.out.println("\n Opção inválida \n");
 				}
 			}
         	
-        	else if (opcao.equals("2")) {
+        	else if (opcao.equals("2")) {  //funcionario
 				exibirMenuLojas();
 				String opcaoLoja = scanner.nextLine();
 				
-				if (opcaoLoja.equals("1")) {
+				if (opcaoLoja.equals("1")) {  //loja1
 					exibirMenuFuncionario();
 					String opcaoFuncionario = scanner.nextLine();
 					
 					if (opcaoFuncionario.equals("1")) {
 						adicionarCliente(loja1, scanner);
+						exibirMenuFuncionario();
 					}
 					
 					else if (opcaoFuncionario.equals("2")) {
-						exibirMenu();
+						exibirMenuLojas();
 					}
 					
 					else if (opcaoFuncionario.equals("3")) {
-						System.out.println("Encerrando...");
+						System.out.println("\n Encerrando... \n");
 						break;
 					}
 					
 					else {
-						System.out.println("Opção inválida");
+						System.out.println("\n Opção inválida. \n");
 					}
 				}
 				
-				else if (opcaoLoja.equals("2")) {
+				else if (opcaoLoja.equals("2")) {  //loja2
 					exibirMenuFuncionario();
 					String opcaoFuncionario = scanner.nextLine();
 					
@@ -313,20 +305,20 @@ public class AppPrincipal {
 					}
 					
 					else if (opcaoFuncionario.equals("2")) {
-						exibirMenu();
+						exibirMenuLojas();
 					}
 					
 					else if (opcaoFuncionario.equals("3")) {
-						System.out.println("Encerrando...");
+						System.out.println("\n Encerrando... \n");
 						break;
 					}
 					
 					else {
-						System.out.println("Opção inválida");
+						System.out.println("\n Opção inválida. \n");
 					}
 				}
 				
-				else if (opcaoLoja.equals("3")) {
+				else if (opcaoLoja.equals("3")) {  //estacionamento
 					exibirMenuFuncionario();
 					String opcaoFuncionario = scanner.nextLine();
 					
@@ -335,20 +327,20 @@ public class AppPrincipal {
 					}
 					
 					else if (opcaoFuncionario.equals("2")) {
-						exibirMenu();
+						exibirMenuLojas();
 					}
 					
 					else if (opcaoFuncionario.equals("3")) {
-						System.out.println("Encerrando...");
+						System.out.println("\n Encerrando... \n");
 						break;
 					}
 					
 					else {
-						System.out.println("Opção inválida");
+						System.out.println("\n Opção inválida. \n");
 					}
 				}
 				
-				else if (opcaoLoja.equals("4")) {
+				else if (opcaoLoja.equals("4")) {  //academia
 					exibirMenuFuncionario();
 					String opcaoFuncionario = scanner.nextLine();
 					
@@ -357,20 +349,20 @@ public class AppPrincipal {
 					}
 					
 					else if (opcaoFuncionario.equals("2")) {
-						exibirMenu();
+						exibirMenuLojas();
 					}
 					
 					else if (opcaoFuncionario.equals("3")) {
-						System.out.println("Encerrando...");
+						System.out.println("\n Encerrando... \n");
 						break;
 					}
 					
 					else {
-						System.out.println("Opção inválida");
+						System.out.println("\n Opção inválida. \n");
 					}
 				}
 				
-				else if (opcaoLoja.equals("5")) {
+				else if (opcaoLoja.equals("5")) {  //cinema
 					exibirMenuFuncionario();
 					String opcaoFuncionario = scanner.nextLine();
 					
@@ -379,16 +371,16 @@ public class AppPrincipal {
 					}
 					
 					else if (opcaoFuncionario.equals("2")) {
-						exibirMenu();
+						exibirMenuLojas();
 					}
 					
 					else if (opcaoFuncionario.equals("3")) {
-						System.out.println("Encerrando...");
+						System.out.println("\n Encerrando... \n");
 						break;
 					}
 					
 					else {
-						System.out.println("Opção inválida");
+						System.out.println("\n Opção inválida. \n");
 					}
 				}
 				
@@ -397,45 +389,50 @@ public class AppPrincipal {
 				}
 				
 				else if (opcaoLoja.equals("7")) {
-					System.out.println("Encerrando...");
+					System.out.println("\n Encerrando... \n");
 					break;
 				}
 			}
         	
+        	else if (opcao.equals("3")) {
+				System.out.println("\n Encerrando... \n");
+				break;
+			}
+        	
         	else {
-				System.out.println("Opção Inválida!");
+				System.out.println("\n Opção Inválida! \n");
 			}
         }		
     }
 	private static void exibirMenu() {
-		System.out.println("---------- Menu Principal ----------" + 
+		System.out.println("\n ---------- Menu Principal ----------" + 
 							"\n 1. Entrar como Dono da Loja" +
 							"\n 2. Entrar como Funcionário" +
 							"\n 3. Sair" + "\n Digite o número da opção escolhida:");
 	}
 	
 	private static void exibirMenuLojas() {
-		System.out.println("---------- Menu ----------" + 
+		System.out.println("\n ---------- Menu ----------" + 
 							"\n 1. Dafiti" +
 							"\n 2. Americanas" +
 							"\n 3. Estacionamento" +
 							"\n 4. Modelo Fit" + 
 							"\n 5. CineDay" +
-							"\n 6. Retornar ao Menu Anterior" +
+							"\n 6. Retornar ao Menu Principal" +
 							"\n 7. Sair" + "\n Digite o número da opção que você é responsável:");
 	}
 	
 	private static void exibirMenuDono() {
-		System.out.println("---------- Menu Loja ----------" + 
+		System.out.println("\n ---------- Menu Loja ----------" + 
 							"\n 1. Lista de Produtos" +
 							"\n 2. Lista de Funcionários" +
 							"\n 3. Lista de Vendas" +
-							"\n 4. Retornar ao Menu Anterior" +
-							"\n 4. Sair" + "\n Digite o número da opção que deseja visualizar:");
+							"\n 4. Retornar ao Menu Principal" +
+							"\n 5. Sair" + "\n Digite o número da opção que deseja visualizar:");
 	}
 	
 	private static void exibirMenuFuncionario() {
-		System.out.println("---------- Menu Loja ----------" + 
+		System.out.println("\n ---------- Menu Funcionário ----------" + 
 							"\n 1. Registrar uma venda" +
 							"\n 2. Sair" + "\n Digite o número da opção que deseja:");
 	}
@@ -443,15 +440,15 @@ public class AppPrincipal {
 	//Método para adicionar produtos ao carrinho de compras:
 
 	private static void adicionarAoCarrinho(Loja loja, CarrinhoDeCompras carrinho, Scanner scanner) {
-	    System.out.println("Escolha o número do produto comprado: ");
+	    System.out.println("\n Escolha o número do produto comprado: ");
 	    int nProduto = scanner.nextInt();
 	    
 	    if (nProduto >= 0 && nProduto < loja.getProduto().size()) {
 	        Produto produtoSelecionado = loja.getProduto().get(nProduto);
 	        carrinho.addProduto(produtoSelecionado);
-	        System.out.println("Produto adicionado ao carrinho: " + produtoSelecionado.getNome());
+	        System.out.println("\n Produto adicionado ao carrinho: " + produtoSelecionado.getNome());
 	    } else {
-	        System.out.println("Opção inválida");
+	        System.out.println("\n Opção inválida.");
 	    }
 	}
 
@@ -459,25 +456,25 @@ public class AppPrincipal {
 
 	private static void adicionarCarrinhoAoCliente(Cliente cliente, CarrinhoDeCompras carrinho) {
 	    cliente.setCarrinhoDeCompras(carrinho);
-	    System.out.println("Carrinho de compras adicionado ao cliente: " + cliente.getNome());
+	    System.out.println("\n Carrinho de compras adicionado ao cliente: " + cliente.getNome() + "\n Valor da compra: R$" + carrinho.calcularValor());
 	}
 
 	//Método para adicionar o cliente na loja:
 
 	private static void adicionarClienteALoja(Loja loja, Cliente cliente) {
 	    loja.addCliente(cliente);
-	    System.out.println("Cliente adicionado à loja: " + cliente.getNome());
+	    System.out.println(" Cliente adicionado à loja: " + cliente.getNome());
 	}
 	
 	private static void adicionarCliente(Loja loja, Scanner scanner) {
 		Cliente cliente = new Cliente();
-		System.out.println("Nome do Cliente: ");
+		System.out.println("\n CADASTRO DO CLIENTE \n Nome do Cliente: ");
 		cliente.nome = scanner.nextLine();
 		
-		System.out.println("CPF do Cliente: ");
+		System.out.println("\n CPF do Cliente: ");
 		cliente.cpf = scanner.nextLine();
 		
-		System.out.println("Contato do Cliente: ");
+		System.out.println("\n Contato do Cliente: ");
 		cliente.contato = scanner.nextLine();
 		
 		CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
@@ -485,22 +482,28 @@ public class AppPrincipal {
 	        exibirMenuProdutos(loja);
 	        adicionarAoCarrinho(loja, carrinho, scanner);
 	        
-	        System.out.println("Deseja adicionar mais produtos ao carrinho? (S/N): ");
+	        System.out.println("\n Deseja adicionar mais produtos ao carrinho? (S/N): ");
 	        String resposta = scanner.next().toUpperCase();
 	        if (!resposta.equals("S")) {
-             carrinho.calcularValor();
-	            break;
+	        	carrinho.calcularValor();
+	        	break;
 	        }
 	    }
 	    
 	    adicionarCarrinhoAoCliente(cliente, carrinho);
 	    adicionarClienteALoja(loja, cliente);
+	    
+	    System.out.println("\n Deseja registrar novas vendas? (S/N): ");
+        String resposta2 = scanner.next().toUpperCase();
+        if (resposta2.equals("S")) {
+        	adicionarCliente(loja, scanner);
+        }
 	}
 	
 	//Método para exibir o menu de produtos:
 
 	private static void exibirMenuProdutos(Loja loja) {
-	    System.out.println("----------- Menu Produtos ----------");
+	    System.out.println("\n ----------- Menu Produtos ----------");
 	    for (Produto produto : loja.getProduto()) {
 	        System.out.println("\n " + loja.getProduto().indexOf(produto) + ". " + produto.getNome());
 	    }
