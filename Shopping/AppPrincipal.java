@@ -301,6 +301,36 @@ public class AppPrincipal {
 							"\n 2. Sair" + "\n Digite o número da opção que deseja:");
 	}
 	
+	//Método para adicionar produtos ao carrinho de compras:
+
+
+	private static void adicionarAoCarrinho(Loja loja, CarrinhoDeCompras carrinho, Scanner scanner) {
+	    System.out.println("Escolha o número do produto comprado: ");
+	    int nProduto = scanner.nextInt();
+	    
+	    if (nProduto >= 0 && nProduto < loja.getProduto().size()) {
+	        Produto produtoSelecionado = loja.getProduto().get(nProduto);
+	        carrinho.addProduto(produtoSelecionado);
+	        System.out.println("Produto adicionado ao carrinho: " + produtoSelecionado.getNome());
+	    } else {
+	        System.out.println("Opção inválida");
+	    }
+	}
+
+	// Método para adicionar o carrinho de compras ao cliente:
+
+	private static void adicionarCarrinhoAoCliente(Cliente cliente, CarrinhoDeCompras carrinho) {
+	    cliente.setCarrinhoDeCompras(carrinho);
+	    System.out.println("Carrinho de compras adicionado ao cliente: " + cliente.getNome());
+	}
+
+	//Método para adicionar o cliente na loja:
+
+	private static void adicionarClienteALoja(Loja loja, Cliente cliente) {
+	    loja.addCliente(cliente);
+	    System.out.println("Cliente adicionado à loja: " + cliente.getNome());
+	}
+	
 	private static void adicionarCliente(Loja loja, Scanner scanner) {
 		Cliente cliente = new Cliente();
 		System.out.println("Nome do Cliente: ");
@@ -312,26 +342,28 @@ public class AppPrincipal {
 		System.out.println("Contato do Cliente: ");
 		cliente.contato = scanner.nextLine();
 		
-		loja.addCliente(cliente);
-		
 		CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
-		
-		System.out.println("----------- Menu Produtos ----------");
-		for (Produto produto : loja.getProduto()) {
-			System.out.println("\n " + loja.getProduto().indexOf(produto) + ". " + produto.getNome());
-		}
-		while (true) {
-			System.out.println("\n Escolha o número do produto comprado: ");
-			int nProduto = scanner.nextInt();
-			if (nProduto < loja.getProduto().size()) {
-				carrinho.addProduto(loja.getProduto().get(nProduto));
-				System.out.println("\n Quantidade do produto comprada: ");
-				carrinho.setQtDoProduto(scanner.nextInt());
-			}
-			else {
-				break;
-			}
-			cliente.setCarrinhoDeCompras(carrinho);
-		}
+	    while (true) {
+	        exibirMenuProdutos(loja);
+	        adicionarAoCarrinho(loja, carrinho, scanner);
+	        
+	        System.out.println("Deseja adicionar mais produtos ao carrinho? (S/N): ");
+	        String resposta = scanner.next().toUpperCase();
+	        if (!resposta.equals("S")) {
+	            break;
+	        }
+	    }
+	    
+	    adicionarCarrinhoAoCliente(cliente, carrinho);
+	    adicionarClienteALoja(loja, cliente);
+	}
+	
+	//Método para exibir o menu de produtos:
+
+	private static void exibirMenuProdutos(Loja loja) {
+	    System.out.println("----------- Menu Produtos ----------");
+	    for (Produto produto : loja.getProduto()) {
+	        System.out.println("\n " + loja.getProduto().indexOf(produto) + ". " + produto.getNome());
+	    }
 	}
 }
