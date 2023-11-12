@@ -488,12 +488,9 @@ public class AppPrincipal {
 	        System.out.println("Deseja adicionar mais produtos ao carrinho? (S/N): ");
 	        String resposta = scanner.next().toUpperCase();
 	        if (!resposta.equals("S")) {
+             carrinho.calcularValor();
 	            break;
 	        }
-	        
-	        else { 
-				carrinho.calcularValor();
-			}
 	    }
 	    
 	    adicionarCarrinhoAoCliente(cliente, carrinho);
