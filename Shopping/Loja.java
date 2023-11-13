@@ -84,10 +84,6 @@ public class Loja {
 		produtos.add(produto);
 	}
 	
-	public void removeProdutos(Produto produto) {
-		produtos.remove(produto);
-	}
-	
 	public void printFuncionarios() {
 		System.out.println("\n Segue a relação dos funcionários:");
 		for (Funcionario funcionario : funcionarios) {
