@@ -82,7 +82,7 @@ public class AppPrincipal {
         cinema.addProdutos(pipocaM);
         
         while(true) {
-        	exibirMenu();
+        	exibirMenu(shopping);
         	String opcao = scanner.nextLine(); // escolher opção do menu
         	
         	if (opcao.equals("1")) { //dono
@@ -384,7 +384,7 @@ public class AppPrincipal {
 				}
 				
 				else if (opcaoLoja.equals("6")) {
-					exibirMenu();
+					exibirMenu(shopping);
 				}
 				
 				else if (opcaoLoja.equals("7")) {
@@ -403,8 +403,9 @@ public class AppPrincipal {
 			}
         }		
     }
-	private static void exibirMenu() {
-		System.out.println("\n ---------- Menu Principal ----------" + 
+	private static void exibirMenu(Shopping shopping) {
+		System.out.println("\n Bem-vindo ao sistema do " + shopping.getNome() + "\n " +
+							"\n ---------- Menu Principal ----------" + 
 							"\n 1. Entrar como Dono da Loja" +
 							"\n 2. Entrar como Funcionário" +
 							"\n 3. Sair" + "\n Digite o número da opção escolhida:");
@@ -436,6 +437,8 @@ public class AppPrincipal {
 							"\n 2. Cadastrar novo produto à loja" +
 							"\n 3. Sair" + "\n Digite o número da opção que deseja:");
 	}
+	//Método para adicionar produtos novos a loja
+	
 	private static void adicionarProdutoALoja(Loja loja, Scanner scanner) {
 		Produto produto = new Produto();
 		System.out.println("\n CADASTRO DO PRODUTO \n Nome do produto: ");
