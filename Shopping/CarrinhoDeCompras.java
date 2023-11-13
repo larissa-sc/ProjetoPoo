@@ -23,10 +23,6 @@ public class CarrinhoDeCompras {
 		produtos.add(produto);
 	}
 	
-	public void removeProduto(Produto produto) {
-		produtos.remove(produto);
-	}
-	
 	public double calcularValor() {
 		double valorTotal = 0.0;
 		for (Produto produto : produtos) {
